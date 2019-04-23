@@ -14,8 +14,9 @@ spring:
       port: 8500
       enabled: true
       discovery:
-        health-check-path: /actuator/health
+        health-check-path: ${server.servlet.context-path}/actuator/health
         prefer-ip-address: true
+        ip-address: localhost
   ### 调用追踪配置
   zipkin:
     base-url: http://localhost:9410
